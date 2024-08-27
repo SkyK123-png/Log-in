@@ -2,20 +2,28 @@
   <head>
     <title> Log-in</title>
     <link rel="stylesheet" href="style.css">
+      <script>
+    if (username === "benar" && password === "benar") {
+      // Memungkinkan pengguna untuk masuk
+    } else {
+      // Tidak memungkinkan pengguna untuk masuk
+    }
+  </script>
+   
+   </script>
   </head>
   <body>
-    
     <div class="wrapper">
-      <form action="">
+      <form id="loginForm">
         <h1>login</h1>
         <div class="input-box">
-          <input type="text" placeholder="Username"
+          <input type="text" id="username" placeholder="username"
           required>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"/></svg>
           
         </div>
         <div class="input-box">
-           <input type="password"
+           <input type="password" id="password"
             placeholder="password" required>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 12c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7z"/></svg>
         </div>
@@ -27,7 +35,25 @@
             </div>
         
         
-        <button type="sumbit" class="btn">login</button>
+        <button type="sumbit" class="btn">login</button></a>
+        <div id="errorMessage" class="error"></div>
+        <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const usernameInput = document.getElementById('username').value;
+            const passwordInput = document.getElementById('password').value;
+
+            const correctUsername = 'Admin';
+            const correctPassword = "admin#123";
+
+            if (usernameInput === correctUsername && passwordInput === correctPassword) {
+                window.location.href = "Hou.html"; // Redirect ke halaman lain setelah login
+            } else {
+                document.getElementById('errorMessage').textContent = 'Username atau password salah!';
+            }
+        });
+    </script>
         
         <div class="register-link">
         <p>Don't have an acccount? <a
