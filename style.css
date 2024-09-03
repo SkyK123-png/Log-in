@@ -124,9 +124,7 @@ font-size: 0.9em;
 }
 
 @keyframes warna {
-  0%   {color: blue;}
-  25%  {color: green;}
-  50%  {color: yellow;}
-  75%  {color: orange;}
-  100% {color: red;}
+  0%   {color: red;}
+  50%  {color: green;}
+  100% {color: blue;}
 }
