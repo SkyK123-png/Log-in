@@ -119,11 +119,11 @@ body {
 font-size: 0.9em;
 }
 
-.h1 {
+.warna-wkwk {
   animation: warna 5s infinite;
 }
 
-@keyframes h1 {
+@keyframes warna {
   0%   {color: blue;}
   25%  {color: green;}
   50%  {color: yellow;}
